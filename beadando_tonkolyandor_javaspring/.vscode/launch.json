@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BeadandoTonkolyandorApplication<beadando_tonkolyandor>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.beadando.beadando_tonkolyandor.BeadandoTonkolyandorApplication",
+            "projectName": "beadando_tonkolyandor",
+            "args": ""
+        }
+    ]
+}
