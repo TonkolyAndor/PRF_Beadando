@@ -1,0 +1,35 @@
+<div id="div_menu" class="div_menu">
+  <button id="btn_prducts" class="btn_menu" (click)="goToProducts()">To shopping</button><br>
+  <button id="btn_clear" class="btn_menu" (click)="clearCart()">Empty cart</button><br>
+  <button id="btn_finalize" class="btn_menu" (click)="finalizeShopping()">Finalize shopping</button><br>
+  <button id="btn_logout" class="btn_menu" (click)="logout()">Logout</button>
+</div>
+<div id="base_div" class="div_content" role="main" >
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small" (click)="listCart()"> <!-- Template Statement -->
+
+    <span><h4>Products in your cart: </h4></span> <!-- Template Interpolation -->
+  </div>
+
+
+  <table>
+    <tr>
+      <td class="td_name">Product name:</td>
+      <td class="td_number">Ordered amount:</td>
+      <td class="td_number">Unit price:</td>
+      <td class="td_number">Sum price:</td>
+      <td class="td_button"></td>
+    </tr>
+    <tr *ngFor="let x of orders">
+      <td class="td_name">{{x[0].name}}</td>
+      <td class="td_number">{{x[0].amount}}</td>
+      <td class="td_number">{{x[0].unit_price}}</td>
+      <td class="td_number">{{x[0].sum_price}}</td>
+      <td class="td_button"><button (click)="remove(x[0].name)">Remove product</button></td>
+    </tr>
+
+  </table>
+
+
+</div>

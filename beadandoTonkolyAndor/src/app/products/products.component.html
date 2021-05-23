@@ -1,0 +1,29 @@
+<div id="menu_div" class="div_menu">
+  <button id="btn_cart" class="btn_menu" (click)="goToCart()">Go to Cart</button>
+  <button id="btn_logout" class="btn_menu" (click)="logout()">Logout</button>
+</div>
+
+<div id="base_div" class="div_content" role="main" >
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small"> <!-- Template Statement -->
+
+    <span><h4>Available products: </h4></span> <!-- Template Interpolation -->
+  </div>
+
+  <table>
+    <tr>
+      <td class="td_name">Product name:</td>
+      <td class="td_number">Unit price:</td>
+      <td class="td_number">Available amount:</td>
+      <td class="td_button"></td>
+    </tr>
+    <tr *ngFor="let x of products">
+      <td class="td_name">{{x.name}}</td>
+      <td class="td_number">{{x.price}}</td>
+      <td class="td_number">{{x.amount}}</td>
+      <td class="td_button"><button (click)="addToCart(x.name)">Add to cart</button></td>
+    </tr>
+
+  </table>
+
+</div>

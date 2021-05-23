@@ -1,0 +1,43 @@
+<div class="content" role="main">
+
+
+  <h2>Login</h2>
+  <table>
+    <tr>
+      <td><label>Username: </label></td>
+      <td><input type="text" id="username" [(ngModel)]="username"></td>
+    </tr>
+    <tr>
+      <td><label>Password: </label></td>
+      <td>
+        <input type="password" id="password" [(ngModel)]="password">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><div class="div_btn"><button (click)="login()">LOGIN</button></div></td>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+  <br>
+
+  <h4>Or, register:</h4>
+  <br>
+  <table>
+    <tr>
+      <td><label>Username: </label></td>
+      <td><input type="text" id="username_reg" [(ngModel)]="username_reg"></td>
+    </tr>
+    <tr>
+      <td><label>Password: </label></td>
+      <td><input type="password" id="password_reg" [(ngModel)]="password_reg"></td>
+    </tr>
+    <tr>
+      <td><label>E-mail: </label></td>
+      <td><input type="text" id="email_reg" [(ngModel)]="email_reg"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div class="div_btn"><button (click)="register()">REGISTER</button></div></td>
+    </tr>
+  </table>
